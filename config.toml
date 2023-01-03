@@ -1,0 +1,21 @@
+baseURL = 'https://machs.space/'
+languageCode = 'en-us'
+title = "ma[ch|x]s'space"
+
+DefaultContentLanguage = 'en'
+SectionPagesMenu = 'main'
+Paginate = 20
+googleAnalytics = ""
+
+[sitemap]
+  changefreq = 'daily'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+[params]
+  description = 'Blog about technical programming stuff, mostly web development related.'
+  recent_posts_number = 10
+
+[markup]
+  [markup.highlight]
+    style = 'native'

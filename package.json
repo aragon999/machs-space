@@ -1,0 +1,26 @@
+{
+	"name": "machs-space",
+	"version": "0.0.1",
+	"description": "Theme for the website machs.space inspired and copied from https://github.com/setsevireon/photophobia.git",
+	"repository": "https://github.com/aragon999/machs-space.git",
+	"author": "aragon999",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"build": "NODE_ENV=production gulp",
+		"clean": "rm -fr public node_modules assets/output"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.2",
+		"cssnano": "^5.0.17",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0",
+		"gulp-postcss": "^9.0.1",
+		"postcss": "^8.4.6",
+		"tailwindcss": "^3.0.22"
+	},
+	"resolutions": {
+		"glob-parent": "^6.0.1",
+		"set-value": "^4.0.1"
+	}
+}
