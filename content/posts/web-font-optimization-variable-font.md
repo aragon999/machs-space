@@ -35,7 +35,7 @@ In the case of the Inter font, the [release](https://github.com/rsms/inter/relea
 We could directly use the provided variable fonts, but there would be two downsides. On the one hand, Shopware 6 currently only includes the `font-weight`s `400`, `600`, and `700`, so we do not need to ship the full range. On the other hand, the `italic` style of Inter is realized by the Slant font axis. While in general, this is no problem, it would break the backward compatibility in Shopware, as in this case to have an italic text one would need to specify `font-style: oblique 10deg;` instead of `font-style: italic;`.
 
 Using `fonttools`, restricting the ranges of an existing variable font is easy. For example, if we would like to extract the `normal` (`slnt = 0`) font from the variable font with both axes (`/Inter Variable/Inter.ttf`) we can do this using the command (assuming you are in the directory which contains the file `Inter.ttf`):
-```
+```bash
 $ fonttools varLib.instancer -o Inter-roman.ttf Inter.ttf "wght=400:700" "slnt=0"
 ```
 which creates a new file `Inter-roman.ttf` with just a single font-axis `wght` from 400 - 700 and the `slnt` axis fixed at the value `0`.
@@ -43,7 +43,7 @@ which creates a new file `Inter-roman.ttf` with just a single font-axis `wght` f
 When trying to extract the Italic version, I noticed two things. First, the value on th `slnt` axis is `-10` and not `10` as one would expect from the CSS definition. I have not dug deeper, but sure there is a reason for this minus sign. The other thing is, that the naming in the metadata is wrong, see this [Github issue](https://github.com/fonttools/fonttools/issues/2613). which can be fixed by [writing custom Python code](https://github.com/fonttools/fonttools/issues/2613#issuecomment-1164496823). But in general, I think the metadata should not matter when the fonts are used on the web. As far as I have noticed, it mainly concerns font pickers in text editing programs.
 
 Luckily there already exist the "single axis" variable `wght` fonts, with the correct metadata `Inter Variable/Single axis/Inter-roman.ttf` and `Inter Variable/Single axis/Inter-italic.ttf`, where we just need to reduce the `wght`-axis:
-```
+```bash
 $ fonttools varLib.instancer -o Inter-italic.reduced.ttf Inter-italic.ttf "wght=400:700"
 $ fonttools varLib.instancer -o Inter-roman.reduced.ttf Inter-roman.ttf "wght=400:700"
 ```
@@ -51,7 +51,7 @@ $ fonttools varLib.instancer -o Inter-roman.reduced.ttf Inter-roman.ttf "wght=40
 If we now could merge those two fonts on a new axis `ital`, with the (discrete) values `0` and `1`, we could ship a single font file. Unfortunately, I did not find a ready-made CLI tool to merge two fonts on a discrete axis, but one probably could do it, by writing a custom Python script. The other way would be to directly create the correct variable font from the Inter source files. Unfortunately for both, I have no time at the moment. So for the [Shopware pull request](https://github.com/shopware/platform/pull/2909), we will only reduce font files to two and not one. It might become the subject of a future blog post though.
 
 Using `woff2_compress` we can then convert the `ttf`-files to `woff2`-files:
-```
+```bash
 $ woff2_compress Inter-roman.reduced.ttf
 $ woff2_compress Inter-italic.reduced.ttf
 ```
