@@ -16,7 +16,7 @@ If you want to follow the hands-on examples of the next parts of this series, yo
 
 ## Overview of the series
 
-Currently, I plan to create three parts of this series. The first one (this one) will contain, besides the introduction, some history of fonts and basic reviews of modern computer fonts. In the second part, we will create a variable font that can be used on the web. In the third part of the series, we will discuss the reduction of the included Glyphs in a font.
+Currently, I plan to create three parts of this series. The first one (this one) will contain, besides the introduction, some history of fonts and basic reviews of modern computer fonts. In the [second part]({{< ref "/posts/web-font-optimization-variable-font" >}}), we will create a variable font that can be used on the web. In the [third part]({{< ref "/posts/web-font-optimization-subsetting-fonts" >}}) of the series, we will discuss the reduction of the included glyphs in a font.
 
 If you already know all about fonts or are not interested in the background of fonts and only want to see how to put the fonts on your website, you can skip the rest of this part.
 
