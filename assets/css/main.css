@@ -7,9 +7,9 @@
 main { @apply text-lg; }
 main p { @apply pb-5; }
 
-main h6 { @apply py-7 font-bold text-xl; }
-main h5 { @apply py-7 font-bold text-xl; }
-main h4 { @apply py-7 font-bold text-2xl; }
+main h6 { @apply pb-3 pt-1 font-bold text-xl; }
+main h5 { @apply pb-3 pt-1 font-bold text-xl; }
+main h4 { @apply py-3 font-bold text-xl; }
 main h3 { @apply py-7 font-bold text-2xl; }
 main h2 { @apply py-7 font-bold text-3xl; }
 main h1 { @apply py-7 font-bold text-4xl; }
