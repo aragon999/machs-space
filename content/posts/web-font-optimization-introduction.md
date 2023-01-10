@@ -51,7 +51,7 @@ The successor of TrueType specification is the [OpenType](https://en.wikipedia.o
 
 In other words, these variable fonts generalize the concept of scaling by introducing additional "axes". These axes are then used to adjust the properties of the font dynamically. In the [OpenType specification currently exist five "registered axis"](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg#registered-axis-tags), namely Italic (`ital`), Optical size (`opsz`), Slant (`slnt`), Width (`wdth`), and Weight (`wght`). But the specification allows the font designer to add additional axis specific to the font. Note that it is not required for a font to have all "registered axis", but they can choose only to support a subset. I also noticed that some fonts implemented 'Slant' instead of 'Italic'. This should be stated in the README of the font.
 
-Note that the file extension for both, TrueType and OpenType can be `.ttf`. But nowadays, these fonts are stored in the [scalable font (SNFT)](https://en.wikipedia.org/wiki/SFNT)-format anyway, so the mime type will be `font/sfnt`. But this does not really matter ☺, as the font rendering libraries can usually determine the type correctly.
+Note that the file extension for both, TrueType and OpenType can be `.ttf`. But nowadays, these fonts are stored in the [scalable font (SFNT)](https://en.wikipedia.org/wiki/SFNT)-format anyway, so the mime type will be `font/sfnt`. But this does not really matter ☺, as the font rendering libraries can usually determine the type correctly.
 
 ## Web Open Font Format (WOFF)
 
