@@ -10,8 +10,6 @@ In the [first part]({{< ref "/posts/web-font-optimization-introduction" >}}) of 
 
 I will illustrate the example on the Shopware default font, which is [Inter](https://github.com/rsms/inter). This font is currently not included as a variable font in Shopware 6, although a variable font is provided in the upstream [release of the font](https://rsms.me/inter/lab/).
 
-For this post, I used the resources of [web.dev on variable fonts](https://web.dev/variable-fonts/) and the [mdn web docs on variable fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) as introductory readings.
-
 We use [fonttools](https://github.com/fonttools/fonttools) to manipulate the font files and [`woff2_compress`](https://github.com/google/woff2) to compress the `.ttf` font files to `.woff2` font files.
 
 ## The current state of variable fonts on the web
