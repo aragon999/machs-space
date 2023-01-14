@@ -25,7 +25,10 @@
 
     <section>
       {{ .Content }}
-      {{ partial "tags.html" . }}
+
+      {{ if .Params.tags }}
+        {{ partial "tags.html" . }}
+      {{ end }}
     </section>
 
     <div class="mt-20">{{ partial "menu-contextual.html" . }}</div>
