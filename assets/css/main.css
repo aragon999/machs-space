@@ -37,3 +37,5 @@ main a:hover { @apply text-gray-500 decoration-solid; }
 .pagination { @apply flex place-content-center text-lg; }
 .pagination ul { @apply flex list-none; }
 .pagination a { @apply px-4 py-2 mx-2 }
+
+.giscus { @apply mt-20 }
