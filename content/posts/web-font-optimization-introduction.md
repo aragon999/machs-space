@@ -1,6 +1,7 @@
 ---
 title: "Web Font Optimization - Introduction"
 date: 2022-12-30T15:36:28+01:00
+series: "web-font-optimization"
 draft: false
 ---
 

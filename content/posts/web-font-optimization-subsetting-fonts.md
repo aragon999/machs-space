@@ -1,6 +1,7 @@
 ---
 title: "Web Font Optimization - Subsetting Fonts"
 date: 2023-01-05T01:20:09+01:00
+series: "web-font-optimization"
 draft: false
 ---
 

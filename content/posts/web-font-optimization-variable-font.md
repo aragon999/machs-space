@@ -1,6 +1,7 @@
 ---
 title: "Web Font Optimization - Variable fonts"
 date: 2023-01-02T00:05:48+01:00
+series: "web-font-optimization"
 draft: false
 ---
 

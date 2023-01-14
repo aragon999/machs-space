@@ -19,3 +19,12 @@ googleAnalytics = ""
 [markup]
   [markup.highlight]
     style = 'native'
+
+[related]
+  threshold = 0
+  includeNewer = true
+  toLower = false
+
+  [[related.indices]]
+    name = "series"
+    weight = 100
