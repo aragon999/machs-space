@@ -55,7 +55,7 @@ Additionally, `UTF-8` is binary compatible with, the prior to Unicode common [Am
 
 Although `UTF-32` would be the easiest format to implement since each "bit-combination" corresponds to one Unicode code point, the advantage of for example `UTF-8` is that for values that require less than four bytes to be encoded, only this amount of bits need to be allocated. Hence `UTF-{8,16}` are also referred to as "variable-length character encoding".
 
-On the web, the [most](https://w3techs.com/technologies/cross/character_encoding/ranking) used encoding is `UTF-8`](https://w3techs.com/technologies/cross/character_encoding/ranking), which has potentially the largest savings in required bytes. In particular, since, all HTML Tags are made up only of ASCII characters, which can be encoded using a single byte, and most of the network protocols are designed to work with packages of 8-bit.
+On the web, the [most used encoding is `UTF-8`](https://w3techs.com/technologies/cross/character_encoding/ranking), which has potentially the largest savings in required bytes. In particular, since, all HTML Tags are made up only of ASCII characters, which can be encoded using a single byte, and most of the network protocols are designed to work with packages of 8-bit.
 
 Nowadays `UTF-32` is mostly [used for the internal representation](https://en.wikipedia.org/wiki/UTF-32#Use) of text, to simplify working on this data. And `UTF-16` is used, for example, in the [internal Windows API for text (up to Windows 10)](https://en.wikipedia.org/wiki/UTF-16#Usage), since although it requires more bits it has some performance benefits. But these performance benefits would be neglectable in comparison to the additional required transfer time when the data has to be sent over the network.
 
